@@ -2,17 +2,25 @@
   <section>
     <header><h1>My Friends</h1></header>
     <ul>
-      <friend-contact></friend-contact>
-      <friend-contact></friend-contact>
+      <friend-contact
+        v-for="friend in friends"
+        :key="friend.id"
+        :id="friend.id"
+        :name="friend.name"
+        :phone-number="friend.phone"
+        :email-address="friend.email"
+        :is-favorite="friend.isFavorite"
+        @toggle-friend-favorite="toggleFavoriteStatus"
+      ></friend-contact>
     </ul>
   </section>
 </template>
 
 <script>
+//this also works to hook import components to parent component
 //import FriendContact from './components/FriendContact.vue';
-
+//components: { FriendContact },
 export default {
-  //components: { FriendContact },
   data() {
     return {
       friends: [
@@ -21,21 +29,31 @@ export default {
           name: "Luis Daniel Simoes",
           phone: "9191919191",
           email: "luis.simoes@xpto.pt",
+          isFavorite: true,
         },
         {
           id: "oliveira",
           name: "Catia Oliveira",
           phone: "9191919191",
           email: "catia.oliveira@xpto.pt",
+          isFavorite: false,
         },
       ],
     };
   },
+  methods: {
+    toggleFavoriteStatus(friendId){
+      const identifiedFriend = this.friends.find(friend => friend.id === friendId);
+      
+      identifiedFriend.isFavorite = !identifiedFriend.isFavorite;
+    }
+  },
 };
 </script>
 
+
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Jost&display=swap");
 * {
   box-sizing: border-box;
 }
