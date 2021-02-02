@@ -11,7 +11,15 @@
 </template>
 
 <script>
+import TheHeader from './components/TheHeader';
+import BadgeList from './components/BadgeList';
+import UserInfo from './components/UserInfo';
 export default {
+  components:{
+    TheHeader: TheHeader,
+    BadgeList: BadgeList,
+    UserInfo: UserInfo
+  },
   data() {
     return {
       activeUser: {

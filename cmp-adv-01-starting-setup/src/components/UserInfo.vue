@@ -14,7 +14,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="css" scoped>
 section {
   margin: 2rem auto;
   max-width: 30rem;
@@ -28,4 +28,13 @@ section div {
   justify-content: space-between;
   align-items: center;
 }
+.badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  background-color: #ccc;
+  color: #2e2e2e;
+}
+
+
 </style>

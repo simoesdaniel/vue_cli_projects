@@ -3,6 +3,7 @@
 </template>
 
 <script>
+
 export default {
   props: ['type', 'caption'],
   computed: {
@@ -16,7 +17,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="css" scoped>
 .badge {
   display: inline-block;
   padding: 0.5rem 1rem;
