@@ -11,6 +11,7 @@
       <li><strong>Phone:</strong> {{ phoneNumber }}</li>
       <li><strong>Email:</strong> {{ emailAddress }}</li>
     </ul>
+    <button @click="$emit('delete-friend',id)">Delete</button>
   </li>
 </template>
 
@@ -26,7 +27,7 @@ export default {
       type: String,
       required: true,
     },
-    phone: Number,
+    phoneNumber: Number,
     emailAddress: String,
     isFavorite: {
       type: Boolean,
@@ -34,7 +35,7 @@ export default {
       default: false,
     },
   },
-  emits: ['toggle-friend-favorite'],
+  emits: ['toggle-friend-favorite','delete-friend'],
   /*emits: {
     'toggle-friend-favorite': function (id) {
       if(id){
