@@ -17,6 +17,8 @@ export default {
 };
 </script>
 
+// style scoped determines that this styling is fixed to this component and
+cannot affect or be affected by other component stylings
 <style lang="css" scoped>
 .badge {
   display: inline-block;
