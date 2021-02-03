@@ -21,17 +21,5 @@ export default {
 // style scoped determines that this styling is fixed to this component and
 cannot affect or be affected by other component stylings
 <style scoped>
-section header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 
-.badge {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  border-radius: 30px;
-  background-color: #ccc;
-  color: #2e2e2e;
-}
 </style>

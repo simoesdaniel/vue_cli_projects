@@ -1,7 +1,8 @@
 <template>
   <section>
     <base-card>
-      <template v-slot:header>
+    <!-- v-lot can be also be called by # -->
+      <template #header>
         <h2>Available Badges</h2>
       </template>
       <template v-slot:default>
