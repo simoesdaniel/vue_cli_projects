@@ -8,10 +8,26 @@
 
 <script>
 export default {
-  props: ['name', 'memberCount', 'id'],
+  props: ['name', 'memberCount', 'teamId'],
   computed: {
-    teamMembersLink(){
-      return '/teams/' + this.id
+    teamMembersLink() {
+      return {
+        name: 'team-members',
+        params: {
+          teamId: this.teamId
+        },
+        query: {
+          sort: 'asc'
+        }
+      };
+      //in router push method we can also pass on object like the above
+      // this.$router.push({
+      //   name: 'team-members',
+      //   params: {
+      //     teamId: this.teamId
+      //   }
+      // });
+      //return '/teams/' + this.teamId
     }
   }
 };
