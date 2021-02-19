@@ -18,8 +18,8 @@ export default {
     //   });
     // }
     ...mapActions({
-      increment: 'increment',
-      increaseOne: 'increase'
+      increment: 'counter/increment',
+      increaseOne: 'counter/increase'
     })
   }
 };

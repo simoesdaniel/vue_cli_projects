@@ -1,5 +1,6 @@
 <template>
   <h3>{{ finalCounter }}</h3>
+  <h4>{{ testAuth }}</h4>
 </template>
 
 <script>
@@ -9,7 +10,7 @@ export default {
     // count() {
     //   return this.$store.getters.finalCounter;
     // }
-    ...mapGetters(['finalCounter'])
+    ...mapGetters(['counter/finalCounter', 'counter/testAuth'])
   }
 };
 </script>
