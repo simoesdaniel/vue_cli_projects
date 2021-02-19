@@ -1,4 +1,4 @@
-export default {
+const store = {
   // namespaced: true,
   state() {
     return { isLoggedIn: false };
@@ -25,3 +25,5 @@ export default {
     }
   }
 };
+
+export default store;
